@@ -1,0 +1,59 @@
+.paintingCard {
+    max-width: 327px;
+    min-width: 310px;
+    position: relative;
+    margin: 0 auto 24px;
+}
+
+.paintingCard__background {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.841672) 100%);
+}
+
+.paintingCard__background img {
+    position: relative;
+    z-index: -1;
+    width: 100%;
+}
+
+.paintingCard__text {
+    max-width: 246px;
+    position: absolute;
+    bottom: 32px;
+    left: 32px;
+}
+
+.paintingCard__name {
+    font-size: 24px;
+    line-height: 30px;
+    color: #FFFFFF;
+    margin-bottom: 7px;
+}
+
+.paintingCard__author {
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #FFFFFF;
+
+    mix-blend-mode: normal;
+    opacity: 0.75;
+}
+
+@media (min-width: 768px) {
+    .paintingCard {
+        margin-bottom: 40px;
+        max-width: 324px;
+    }
+}
+
+@media (min-width: 800px) {
+    .paintingCard {
+        max-width: 310px;
+    }
+}
+
+@media (min-width: 1360px) {
+    .paintingCard {
+        margin: 0 0 40px;
+    }
+}

@@ -7,7 +7,7 @@ export default function Header() {
     
     return (
         <header>
-            <div className="header__container">
+            <div className="container header__container">
                 <div className="header__logo"><img src={Logo} alt="gallery logo" /></div>
                 <p>{`${galleryMode ? "stop" : "start"} slideshow`}</p>
             </div>
