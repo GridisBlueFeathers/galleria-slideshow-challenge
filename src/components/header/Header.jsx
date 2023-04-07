@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Logo from "../../assets/shared/logo.svg"
 import "./Header.css";
 
 export default function Header() {
@@ -8,7 +7,7 @@ export default function Header() {
     return (
         <header>
             <div className="container header__container">
-                <div className="header__logo"><img src={Logo} alt="gallery logo" /></div>
+                <div className="header__logo"><img src={"./assets/shared/logo.svg"} alt="gallery logo" /></div>
                 <p>{`${galleryMode ? "stop" : "start"} slideshow`}</p>
             </div>
         </header>
