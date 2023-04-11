@@ -1,0 +1,160 @@
+.painting {
+    margin: 0 24px 98px;
+    padding-top: 104px;
+    position: relative;
+}
+
+.painting__image {
+    text-align: center;
+}
+
+.painting__image img {
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.painting__info {
+    position: absolute;
+    padding: 24px;
+    background-color: #fff;
+    left: 0;
+    bottom: -54px;
+    min-width: 232px;
+    max-width: 232px;
+}
+
+.painting__name {
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 8px;
+}
+
+.painting__authorName {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19px;
+    color: #7D7D7D;
+}
+
+.painiting_authorImage {
+    position: absolute;
+    bottom: -118px;
+    left: 16px;
+}
+
+.painiting_authorImage img {
+    max-width: 64px;
+}
+
+.painting__modalButton {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    display: flex;
+    background: #000000;
+    mix-blend-mode: normal;
+    opacity: 0.75;
+    align-items: center;
+    padding: 14px 16px 13px;
+}
+
+.painting__modalIcon {
+    margin-right: 14px;
+}
+
+.painting__modalText {
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 2.14286px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+.description {
+    margin: 0 24px 139px;
+    position: relative;
+    padding: 74px 0 0;
+}
+
+.description__year {
+    position: absolute;
+    font-size: 100px;
+    line-height: 100px;
+    color: #F3F3F3;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.description__text {
+    font-size: 14px;
+    line-height: 28px;
+    color: #7D7D7D;
+    margin-bottom: 68px;
+}
+
+.description a {
+    font-size: 9px;
+    line-height: 11px;
+    letter-spacing: 1.92857px;
+    color: #7D7D7D;
+    text-transform: uppercase;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 17px 24px 16px;
+    border-top: 1px solid #E5E5E5;
+    align-items: center;
+}
+
+.footer__name {
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 9px;
+}
+
+.footer__author {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    opacity: 0.75;
+}
+
+.footerButtons {
+    display: flex;
+}
+
+.footerButtons__button {
+    opacity: 0.15;
+}
+
+.footerButtons__active {
+    opacity: 1;
+}
+
+.footerButtons__button:first-of-type {
+    margin-right: 23px;
+}
+
+.footerButtons__button img {
+    max-width: 16px;
+}
+
+@media (min-width: 768px) {
+    .painting {
+        padding-top: 129px;
+    }
+}
+
+@media (min-width: 1360px) {
+    .paintingContainer {
+        padding-top: 129px;
+    }
+}

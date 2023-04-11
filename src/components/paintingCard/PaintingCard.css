@@ -3,10 +3,11 @@
     min-width: 310px;
     position: relative;
     margin: 0 auto 24px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.841672) 100%);
 }
 
-.paintingCard__background {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.841672) 100%);
+.paintingCard:hover {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.841672), rgba(255, 255, 255, 0.499872));
 }
 
 .paintingCard__background img {
