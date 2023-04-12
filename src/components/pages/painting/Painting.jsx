@@ -42,12 +42,14 @@ export default function Painting() {
         if (event.target.className) {
             document.getElementById("modal").style.display = "none";
             document.querySelector("body").style.overflow = "auto";
+            document.querySelector("body").style.position = "auto";
         }
     }
     
     const handleModalOpen = () => {
         document.getElementById("modal").style.display = "block";
         document.querySelector("body").style.overflow = "hidden";
+        document.querySelector("body").style.position = "fixed";
 
     }
 
