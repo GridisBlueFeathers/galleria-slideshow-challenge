@@ -147,6 +147,38 @@ footer {
     max-width: 16px;
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.modal__container {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    padding: 0 24px;
+}
+
+.modal__close {
+    font-size: 14px;
+    line-height: 17px;
+    text-align: right;
+    letter-spacing: 3px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    margin-bottom: 33px;
+}
+
+.modal__picture img {
+    max-width: 100%;
+}
+
 @media (min-width: 768px) {
     .painting {
         padding-top: 129px;

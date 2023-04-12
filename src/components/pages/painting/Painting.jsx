@@ -38,6 +38,19 @@ export default function Painting() {
         }
     }, [paintingPath])
 
+    const handleModalClose = (event) => {
+        if (event.target.className) {
+            document.getElementById("modal").style.display = "none";
+            document.querySelector("body").style.overflow = "auto";
+        }
+    }
+    
+    const handleModalOpen = () => {
+        document.getElementById("modal").style.display = "block";
+        document.querySelector("body").style.overflow = "hidden";
+
+    }
+
     if(!paintingData) {
         return (
             <div>
@@ -68,7 +81,7 @@ export default function Painting() {
                         <div className="painting__modalIcon">
                             <img src="./assets/shared/icon-view-image.svg" alt="expand image arrows" />
                         </div>
-                        <p className="painting__modalText">
+                        <p className="painting__modalText" onClick={handleModalOpen}>
                             view image
                         </p>
                     </div>
@@ -85,6 +98,16 @@ export default function Painting() {
                     </a>
                 </section>
             </main>
+            <section className="modal" onClick={handleModalClose} id="modal">
+                <div className="modal__container">
+                    <p className="modal__close">
+                        close
+                    </p>
+                    <div className="modal__picture">
+                        <img src={paintingData.images.gallery} alt="" />
+                    </div>
+                </div>
+            </section>
             <footer>
                 <div className="footerInfo">
                     <h3 className="footer__name">
