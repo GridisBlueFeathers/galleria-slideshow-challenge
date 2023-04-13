@@ -77,9 +77,9 @@ export default function Painting() {
                         <h2 className="painting__authorName">
                             {paintingData.artist.name}
                         </h2>
-                    </div>
-                    <div className="painiting_authorImage">
-                        <img src={paintingData.artist.image} alt={paintingData.artist.name} />
+                        <div className="painiting_authorImage">
+                            <img src={paintingData.artist.image} alt={paintingData.artist.name} />
+                        </div>
                     </div>
                     <div className="painting__modalButton">
                         <div className="painting__modalIcon">

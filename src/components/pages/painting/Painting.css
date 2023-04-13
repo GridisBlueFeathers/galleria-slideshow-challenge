@@ -38,7 +38,7 @@
 
 .painiting_authorImage {
     position: absolute;
-    bottom: -118px;
+    bottom: -64px;
     left: 16px;
 }
 
@@ -189,14 +189,130 @@ footer {
     max-width: 100%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 702px) {
     .painting {
         padding-top: 129px;
+        margin: 0 40px;
+    }
+
+    .painting__image {
+        text-align: left;
+    }
+
+    .painting__image img {
+        max-width: 475px;
+    }
+
+    .painting__info {
+        right: 0;
+        left: auto;
+        bottom: auto;
+        top: 129px;
+        padding: 0 0 67px 65px;
+        min-width: 380px;
+    }
+
+    .painting__name {
+        font-size: 56px;
+        line-height: 64px;
+        margin-bottom: 24px;
+    }
+
+    .painiting_authorImage {
+        left: auto;
+        bottom: -131px;
+        right: 55px;
+    }
+
+    .painiting_authorImage img {
+        max-width: 128px;
+    }
+
+    .painting__modalButton {
+        left: 16px;
+        bottom: 16px;
+        top: auto;
+    }
+
+    .description {
+        padding-top: 139px;
+        margin: 0 156px 149px;
+    }
+
+    .description__text {
+        margin-bottom: 40px;
+    }
+
+    .description__year {
+        font-size: 200px;
+        line-height: 150px;
+        left: -115px;
+        bottom: auto;
+        right: auto;
+        top: 75px;
+    }
+
+    .footer__name {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .footer__author {
+        font-size: 13px;
+        line-height: 16px;
+    }
+
+    .footerButtons__button img {
+        max-width: 24px;
+    }
+
+    .modal__container {
+        padding: 0 49px;
+    }
+
+    .modal__close {
+        margin-bottom: 41px;
     }
 }
 
 @media (min-width: 1360px) {
     .paintingContainer {
         padding-top: 129px;
+    }
+
+    .painting {
+        padding-top: 100px;
+        margin: 0;
+    }
+
+    .painting__info {
+        left: 410px;
+        top: 100px;
+    }
+
+    .paintingContainer {
+        display: flex;
+    }
+
+    .painiting_authorImage {
+        bottom: auto;
+        top: 496px;
+        left: 95px;
+        right: auto;
+    }
+
+    .description {
+        max-width: 350px;
+        padding-top: 215px;
+        margin: 0 0 0 410px;
+    }
+
+    .description__text {
+        margin-bottom: 109px;
+    }
+
+    .description__year {
+        left: 22px;
+        top: 100px;
     }
 }
