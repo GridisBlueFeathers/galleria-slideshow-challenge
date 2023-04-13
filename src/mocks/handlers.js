@@ -15,6 +15,8 @@ export const handlers = [
             painitngData: data[pos], 
             nextPath:  pos + 1 === data.length ? "" : data[pos + 1].pathName,
             prevPath:  pos === 0 ? "" : data[pos - 1].pathName,
+            dataLength: data.length,
+            progress: pos + 1,
         }
 
         return res(ctx.status(200), ctx.json(response))

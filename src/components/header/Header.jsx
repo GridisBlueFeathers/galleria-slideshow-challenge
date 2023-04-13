@@ -1,9 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Header.css";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 export default function Header() {
     const [galleryMode, setGallerymode] = useState(false);
+    const { paintingPath } = useParams();
+
+    useEffect(() => {
+        setGallerymode(!!paintingPath)
+    }, [paintingPath])
     
     return (
         <header>
@@ -13,7 +18,9 @@ export default function Header() {
                         <img src={"./assets/shared/logo.svg"} alt="gallery logo" />
                     </Link>
                 </div>
-                <p>{`${galleryMode ? "stop" : "start"} slideshow`}</p>
+                <Link to={galleryMode ? "/" : "/starry-night"}>
+                    {`${galleryMode ? "stop" : "start"} slideshow`}
+                </Link>
             </div>
         </header>
     );

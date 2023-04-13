@@ -23,16 +23,17 @@ header {
     max-height: 100%;
 }
 
-header p {
+header a {
     font-size: 9px;
     letter-spacing: 1.92857px;
     line-height: 11px;
     text-transform: uppercase;
     color: #7D7D7D;
     cursor: pointer;
+    text-decoration: none;
 }
 
-header p:hover {
+header a:hover {
     color: #000;
 }
 
@@ -41,7 +42,7 @@ header p:hover {
         padding: 29px 40px 27px;
     }
 
-    header p {
+    header a {
         font-size: 12px;
         line-height: 15px;
         letter-spacing: 2.57143px;        

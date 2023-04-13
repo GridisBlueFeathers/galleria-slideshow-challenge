@@ -4,7 +4,7 @@ import "./PaintingCard.css";
 export default function PaintingCard({ paintingName, paintingAuthor, panitingSource, paintingPath }) {
 
     return (
-        <li className="paintingCard">
+        <li className="paintingCard" id={paintingPath}>
             <Link to={`/${paintingPath}`}>
                 <div className="paintingCard__background">
                     <img src={panitingSource} alt={paintingName} />

@@ -6,11 +6,26 @@ export default function Painting() {
     const [paintingData, setPaintingData] = useState(null);
     const [nextPath, setNextPath] = useState(null);
     const [prevPath, setPrevPath] = useState(null);
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [progressWidth, setProgressWidth] = useState(null);
     const { paintingPath } = useParams();
 
     const handleResize = () => {
         setWindowWidth(window.innerWidth);
+    }
+
+    const handleModalClose = (event) => {
+        if (event.target.className) {
+            document.getElementById("modal").style.display = "none";
+            document.querySelector("body").style.overflow = "auto";
+            document.querySelector("body").style.position = "relative";
+        }
+    }
+
+    const handleModalOpen = () => {
+        document.getElementById("modal").style.display = "block";
+        document.querySelector("body").style.overflow = "hidden";
+        document.querySelector("body").style.position = "fixed";
     }
 
     useEffect(() => {
@@ -22,11 +37,12 @@ export default function Painting() {
                 }
             })
 
-            const { painitngData, nextPath, prevPath } = await paintingRequest.json();
+            const { painitngData, nextPath, prevPath, dataLength, progress } = await paintingRequest.json();
 
             setPaintingData(painitngData);
             setNextPath(nextPath);
             setPrevPath(prevPath);
+            setProgressWidth(Math.floor((progress / dataLength) * 100))
         }
 
         getPainting();
@@ -38,21 +54,7 @@ export default function Painting() {
         }
     }, [paintingPath])
 
-    const handleModalClose = (event) => {
-        if (event.target.className) {
-            document.getElementById("modal").style.display = "none";
-            document.querySelector("body").style.overflow = "auto";
-            document.querySelector("body").style.position = "relative";
-        }
-    }
     
-    const handleModalOpen = () => {
-        document.getElementById("modal").style.display = "block";
-        document.querySelector("body").style.overflow = "hidden";
-        document.querySelector("body").style.position = "fixed";
-
-    }
-
     if(!paintingData) {
         return (
             <div>
@@ -111,6 +113,7 @@ export default function Painting() {
                 </div>
             </section>
             <footer>
+                <div className="footer__progress" style={{"--width": progressWidth}}></div>
                 <div className="footerInfo">
                     <h3 className="footer__name">
                         {paintingData.name}
