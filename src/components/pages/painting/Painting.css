@@ -51,11 +51,15 @@
     top: 120px;
     left: 16px;
     display: flex;
-    background: #000000;
+    background: rgba(0, 0, 0, 0.75);
     mix-blend-mode: normal;
-    opacity: 0.75;
     align-items: center;
     padding: 14px 16px 13px;
+    cursor: pointer;
+}
+
+.painting__modalButton:hover {
+    background-color: rgba(255, 255, 255, 0.25);
 }
 
 .painting__modalIcon {
@@ -99,6 +103,10 @@
     letter-spacing: 1.92857px;
     color: #7D7D7D;
     text-transform: uppercase;
+}
+
+.description a:hover {
+    color: #000;
 }
 
 footer {
@@ -145,8 +153,13 @@ footer {
     opacity: 0.15;
 }
 
+
 .footerButtons__active {
     opacity: 1;
+}
+
+.footerButtons__active:hover {
+    opacity: 0.5;
 }
 
 .footerButtons__button:first-of-type {
@@ -183,6 +196,11 @@ footer {
     color: #FFFFFF;
     text-transform: uppercase;
     margin-bottom: 33px;
+    cursor: pointer;
+}
+
+.modal__close:hover {
+    opacity: 0.25;
 }
 
 .modal__picture img {
