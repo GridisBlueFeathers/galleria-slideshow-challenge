@@ -1,17 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
 
 html {
-  font-family: "Libre Baskerville", serif;
-  font-weight: 700;
+    font-family: "Libre Baskerville", serif;
+    font-weight: 700;
 }
 
 .container {
-  max-width: 1360px;
-  margin: 0 auto;
+    max-width: 1360px;
+    margin: 0 auto;
 }
 
 main {
-  position: relative;
+    position: relative;
+}
+
+@media (min-width: 1360px) {
+    main {
+        padding: 0 40px;
+    }
 }
 
 /* :root {

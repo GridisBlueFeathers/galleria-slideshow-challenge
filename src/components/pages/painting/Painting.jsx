@@ -23,7 +23,7 @@ export default function Painting() {
     }
 
     const handleModalOpen = () => {
-        document.getElementById("modal").style.display = "block";
+        document.getElementById("modal").style.display = "flex";
         document.querySelector("body").style.overflow = "hidden";
         document.querySelector("body").style.position = "fixed";
     }
@@ -69,6 +69,14 @@ export default function Painting() {
                 <section className="painting">
                     <div className="painting__image">
                         <img src={windowWidth < 768 ? paintingData.images.hero.small : paintingData.images.hero.large} alt={paintingData.name} />
+                        <div className="painting__modalButton" onClick={handleModalOpen}>
+                        <div className="painting__modalIcon">
+                            <img src="./assets/shared/icon-view-image.svg" alt="expand image arrows" />
+                        </div>
+                        <p className="painting__modalText">
+                            view image
+                        </p>
+                    </div>
                     </div>
                     <div className="painting__info">
                         <h1 className="painting__name">
@@ -81,14 +89,7 @@ export default function Painting() {
                             <img src={paintingData.artist.image} alt={paintingData.artist.name} />
                         </div>
                     </div>
-                    <div className="painting__modalButton">
-                        <div className="painting__modalIcon">
-                            <img src="./assets/shared/icon-view-image.svg" alt="expand image arrows" />
-                        </div>
-                        <p className="painting__modalText" onClick={handleModalOpen}>
-                            view image
-                        </p>
-                    </div>
+                    
                 </section>
                 <section className="description">
                     <p className="description__year">

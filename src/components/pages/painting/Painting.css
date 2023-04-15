@@ -166,13 +166,13 @@ footer {
     bottom: 0;
     z-index: 20;
     background-color: rgba(0, 0, 0, 0.85);
+    display: none;
+    align-items: center;
+    justify-content: center;
 }
 
 .modal__container {
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
-    padding: 0 24px;
+    max-width: 917px;
 }
 
 .modal__close {
@@ -266,9 +266,9 @@ footer {
         max-width: 24px;
     }
 
-    .modal__container {
+    /* .modal__container {
         padding: 0 49px;
-    }
+    } */
 
     .modal__close {
         margin-bottom: 41px;
@@ -302,17 +302,24 @@ footer {
     }
 
     .description {
-        max-width: 350px;
+        width: 100%;
         padding-top: 215px;
         margin: 0 0 0 410px;
     }
-
+    
     .description__text {
+        max-width: 350px;
         margin-bottom: 109px;
     }
 
     .description__year {
-        left: 22px;
+        left: auto;
+        right: 0;
         top: 100px;
+    }
+
+    .painting__modalButton {
+        top: 604px;
+        bottom: auto;
     }
 }

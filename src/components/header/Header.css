@@ -57,6 +57,10 @@ header a:hover {
 }
 
 @media (min-width: 1360px) {
+    header {
+        padding: 0 40px;
+    }
+
     .header__container {
         padding: 40px 0;
     }

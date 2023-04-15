@@ -55,6 +55,6 @@
 
 @media (min-width: 1360px) {
     .paintingCard {
-        margin: 0 0 40px;
+        margin: 0 auto 40px;
     }
 }
