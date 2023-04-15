@@ -186,6 +186,7 @@ footer {
 
 .modal__container {
     max-width: 917px;
+    padding: 0 24px;
 }
 
 .modal__close {
@@ -284,9 +285,9 @@ footer {
         max-width: 24px;
     }
 
-    /* .modal__container {
+    .modal__container {
         padding: 0 49px;
-    } */
+    }
 
     .modal__close {
         margin-bottom: 41px;
